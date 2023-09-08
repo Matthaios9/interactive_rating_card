@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Overpass', sans-serif;
+}
+
+.container{
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__container{
+    background-color: hsl(213, 19%, 18%);
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+
+#icon-star{
+    background-color: hsl(216, 12%, 34%);
+    padding: .65rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#feedback-Question{
+    margin-bottom: 1rem;
+}
+
+#para{
+    margin-bottom: 1rem;
+}
+
+.feedback{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.feedBack{
+    height: 20px;
+    width: 20px;
+    background-color: hsl(216, 12%, 34%);
+    padding: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    border: none;
+}
+
+.feedBack:hover{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(25, 97%, 53%);
+}
+
+.submitBtn{
+    width: 340px;
+    border-radius: 20px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(25, 97%, 53%);
+    padding: .75rem .85rem;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.submitBtn:hover{
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.popup__container{
+    background-color: hsl(213, 19%, 18%);
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-thankyou{
+    margin-bottom: 1rem;
+}
+
+.para-thankyou{
+    text-align: center;
+    margin-bottom: 1rem;   
+}
+
+#thank-you{
+    margin-bottom: 1rem;
+}
+
+.ratingBtn{
+    width: 340px;
+    border-radius: 20px;
+    border: none;
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(217, 12%, 34%);
+    padding: .75rem .85rem;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.popup__container.active{
+    display: flex;
+}
+
+.card__container.inactive{
+    display: none;
+}
+.popup__container.inactive{
+    display: none;
+}
+
+.card__container.active{
+    display: flex;
+}
+
+/* media queries for mobile devices */
+
+@media screen and (min-width: 375px) {
+    /* card container css */
+    .container{
+        max-height: 100vh;
+    }
+
+    .card__container{
+        max-width: 300px;
+    }
+
+    .submitBtn{
+        width: 240px;
+    }
+        
+    .feedback{
+       justify-content: space-around;
+       margin-bottom: 0;
+    }
+
+    #select1{
+        margin-left: 0;
+    }
+
+    #select5{
+        margin-right: 0;
+    }
+
+    .feedBack{
+        padding: 1.30rem;
+        margin-left: .5rem;
+    }
+
+    /* thankyou card css */
+
+    .popup__container{
+        max-width: 300px;
+    }
+
+    .ratingBtn{
+        width: 200px;
+    }
+
+    #img-thankyou{
+        margin-bottom: 1.5rem;
+    }
+
+    #thank-you{
+        margin-top: .75rem;
+    }
+}
